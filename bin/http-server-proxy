@@ -22,6 +22,7 @@ if (argv.h || argv.help) {
     '  -a           Address to use [0.0.0.0]',
     '  -d           Show directory listings [true]',
     '  -i           Display autoIndex [true]',
+    '  --api [path] Api Proxy Path Prefix',
     '  -g --gzip    Serve gzip files when possible [false]',
     '  -e --ext     Default file extension if none supplied [none]',
     '  -s --silent  Suppress log messages from output',
@@ -50,6 +51,7 @@ var port = argv.p || parseInt(process.env.PORT, 10),
     ssl = !!argv.S || !!argv.ssl,
     proxy = argv.P || argv.proxy,
     utc = argv.U || argv.utc,
+    apiPrefix = argv.api,
     logger;
 
 if (!argv.s && !argv.silent) {
@@ -103,7 +105,8 @@ function listen(port) {
     ext: argv.e || argv.ext,
     logFn: logger.request,
     proxy: proxy,
-    showDotfiles: argv.dotfiles
+    showDotfiles: argv.dotfiles,
+    apiPrefix: apiPrefix
   };
 
   if (argv.cors) {

@@ -1,19 +1,19 @@
 {
-  "name": "http-server",
+  "name": "http-server-proxy",
   "version": "0.11.1",
   "description": "A simple zero-configuration command-line http server",
   "main": "./lib/http-server",
   "repository": {
     "type": "git",
-    "url": "git://github.com/indexzero/http-server.git"
+    "url": "git://github.com/yunqiangwu/http-server-proxy.git"
   },
   "keywords": [
     "cli",
     "command"
   ],
   "scripts": {
-    "start": "node ./bin/http-server",
-    "pretest": "common bin/http-server lib/ test",
+    "start": "node ./bin/http-server-proxy",
+    "pretest": "common bin/http-server-proxy lib/ test",
     "test": "vows --spec --isolate"
   },
   "files": [
@@ -81,12 +81,12 @@
     "vows": "0.7.x"
   },
   "bugs": {
-    "url": "https://github.com/nodeapps/http-server/issues"
+    "url": "https://github.com/yunqiangwu/http-server/issues"
   },
   "license": "MIT",
   "preferGlobal": "true",
   "bin": {
-    "http-server": "./bin/http-server",
-    "hs": "./bin/http-server"
+    "http-server-proxy": "./bin/http-server-proxy",
+    "hsp": "./bin/http-server-proxy"
   }
 }
