@@ -1,6 +1,6 @@
 {
   "name": "http-server-proxy",
-  "version": "0.13.4",
+  "version": "0.13.5",
   "description": "A simple zero-configuration command-line http server",
   "main": "./lib/http-server",
   "repository": {
